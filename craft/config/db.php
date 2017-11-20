@@ -19,4 +19,11 @@ if($_SERVER["SERVER_ADDR"] == "::1"){
 // If EXTERNAL
 }else{
   // External DB info
+  return array(
+    'tablePrefix' => 'craft',
+    'server' => 'localhost',
+    'database' => 'martrwg193_storm',
+    'user' => 'martrwg193_storm',
+    'password' => '#Storm789',
+  );
 }

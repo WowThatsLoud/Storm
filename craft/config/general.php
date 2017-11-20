@@ -17,6 +17,7 @@ return array(
         'enableCsrfProtection' => true,
         'phpMaxMemoryLimit' => '256M',
         'sendPoweredByHeader' => false,
+        'siteUrl' => 'http://www.martrauhe.nl/',
         'actionTrigger' => 'actions'
     ),
     'craft.dev' => array(
@@ -24,5 +25,11 @@ return array(
         'siteUrl' => 'http://craft.dev/',
         'allowAutoUpdates' => true,
         'backupDbOnUpdate' => false,
+    ),
+    'localhost' => array(
+        'siteUrl' => 'http://localhost/Storm/public/',
+        'patrol' => [
+          'forceSsl' => false,
+          ]
     ),
 );
