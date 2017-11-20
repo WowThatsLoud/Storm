@@ -1,0 +1,140 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "cf50c4c5f9bd5a78d28ac96651ea948a",
+    "content-hash": "9d615026a1c23bab28cb1d04ff0b08c8",
+    "packages": [
+        {
+            "name": "itmundi/schematic",
+            "version": "3.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itmundi/schematic.git",
+                "reference": "d93bdc4c28ade494d2a79643f40743f8410ec675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itmundi/schematic/zipball/d93bdc4c28ade494d2a79643f40743f8410ec675",
+                "reference": "d93bdc4c28ade494d2a79643f40743f8410ec675",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5|^7.0",
+                "symfony/yaml": "~2.8"
+            },
+            "bin": [
+                "bin/schematic"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NerdsAndCompany\\Schematic\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bart van Gennep",
+                    "email": "b.vangennep@nerds.company",
+                    "homepage": "http://www.nerds.company",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Bob Olde Hampsink",
+                    "email": "b.oldehampsink@nerds.company",
+                    "homepage": "http://www.nerds.company",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Gijs Stegehuis",
+                    "email": "g.stegehuis@nerds.company",
+                    "homepage": "http://www.nerds.company",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Nick Obermeijer",
+                    "email": "n.obermeijer@nerds.company",
+                    "homepage": "http://www.nerds.company",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Arjan Kleene",
+                    "email": "a.kleene@nerds.company",
+                    "homepage": "http://www.nerds.company",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Niek Schmoller",
+                    "email": "n.schmoller@nerds.company",
+                    "homepage": "http://www.nerds.company",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Craft setup and sync tool",
+            "time": "2016-07-19 13:34:08"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.8.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "396784cd06b91f3db576f248f2402d547a077787"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/396784cd06b91f3db576f248f2402d547a077787",
+                "reference": "396784cd06b91f3db576f248f2402d547a077787",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-10-21 20:59:10"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

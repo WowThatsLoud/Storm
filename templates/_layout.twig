@@ -1,0 +1,44 @@
+{% extends "_base" %}
+
+{% block body %}
+	<header id="header">
+		<div class="container">
+			<div class="display-table">
+				<div class="logo display-table-cell">
+					<a href="{{siteUrl}}" style="background-image: url('//subsitetest.3daystartup.org/files/2014/10/sponsor-placeholder_1.jpg')"></a>
+				</div>
+				<div class="nav display-table-cell">
+					<nav class="top-menu">
+						{{craft.olivemenus.getMenuHTML('topMenu')}}
+					</nav>
+					<nav class="main-menu">
+						{{craft.olivemenus.getMenuHTML('mainMenu')}}
+					</nav>
+					<a href="#toggle-menu" class="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="mobile-menu">
+		<div class="menus">
+			{{craft.olivemenus.getMenuHTML('topMenu')}}
+			{{craft.olivemenus.getMenuHTML('mainMenu')}}
+		</div>
+	</nav>
+
+	<div class="header-spacing"></div>
+
+	<section class="main">
+		{% block content %}
+		{% endblock %}
+	</section>
+
+	<footer id="footer">
+
+	</footer>
+{% endblock %}

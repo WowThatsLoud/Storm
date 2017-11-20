@@ -1,0 +1,267 @@
+locales:
+  - en
+  - nl
+assetSources:
+  projectDocumenten:
+    type: Local
+    name: 'Project Documenten'
+    sortOrder: '1'
+    settings:
+      publicURLs: '1'
+      path: documents/
+      url: localhost/public/documents/
+    fieldLayout:
+      fields: {  }
+fields:
+  Default:
+    body:
+      name: Body
+      required: false
+      instructions: null
+      translatable: '1'
+      type: RichText
+      settings:
+        configFile: Standard.json
+        columnType: text
+      context: global
+    tags:
+      name: Tags
+      required: false
+      instructions: null
+      translatable: '0'
+      type: Tags
+      settings:
+        source: 'taggroup:default'
+      context: global
+globalSets: {  }
+plugins:
+  FormBuilder2:
+    isInstalled: true
+    isEnabled: true
+    settings:
+      pluginName: null
+      canDoActions: false
+  ImageResizer:
+    isInstalled: true
+    isEnabled: true
+    settings:
+      enabled: true
+      imageWidth: '2048'
+      imageHeight: '2048'
+      imageQuality: '100'
+      assetSources: '*'
+      assetSourceSettings: null
+      skipLarger: true
+      croppingRatios:
+        -
+          name: Free
+          width: none
+          height: none
+        -
+          name: Square
+          width: 1
+          height: 1
+        -
+          name: Constrain
+          width: relative
+          height: relative
+        -
+          name: '4:3'
+          width: 4
+          height: 3
+  Olivemenus:
+    isInstalled: true
+    isEnabled: true
+    settings: {  }
+  Seo:
+    isInstalled: true
+    isEnabled: true
+    settings:
+      sitemapName: sitemap
+      publicPath: null
+      titleSuffix: null
+  Translate:
+    isInstalled: true
+    isEnabled: true
+    settings: {  }
+sections:
+  contact:
+    name: Contact
+    type: single
+    hasUrls: '1'
+    template: contact
+    maxLevels: null
+    enableVersioning: '1'
+    locales:
+      en:
+        enabledByDefault: '1'
+        urlFormat: contact
+        nestedUrlFormat: null
+      nl:
+        enabledByDefault: '1'
+        urlFormat: contact
+        nestedUrlFormat: null
+    entryTypes:
+      contact:
+        name: Contact
+        hasTitleField: '1'
+        titleLabel: Titel
+        titleFormat: null
+        fieldLayout:
+          tabs:
+            Default:
+              body: '0'
+              tags: '0'
+  homepage:
+    name: Homepage
+    type: single
+    hasUrls: '1'
+    template: index
+    maxLevels: null
+    enableVersioning: '1'
+    locales:
+      en:
+        enabledByDefault: '1'
+        urlFormat: homepage
+        nestedUrlFormat: null
+      nl:
+        enabledByDefault: '1'
+        urlFormat: __home__
+        nestedUrlFormat: null
+    entryTypes:
+      homepage:
+        name: Homepage
+        hasTitleField: '1'
+        titleLabel: Title
+        titleFormat: null
+        fieldLayout:
+          tabs:
+            Content:
+              body: '1'
+  news:
+    name: News
+    type: channel
+    hasUrls: '1'
+    template: news/_entry
+    maxLevels: null
+    enableVersioning: '1'
+    locales:
+      nl:
+        enabledByDefault: '1'
+        urlFormat: 'news/{postDate.year}/{slug}'
+        nestedUrlFormat: null
+    entryTypes:
+      news:
+        name: News
+        hasTitleField: '1'
+        titleLabel: Titel
+        titleFormat: null
+        fieldLayout:
+          tabs:
+            Content:
+              body: '1'
+              tags: '0'
+  nieuws:
+    name: Nieuws
+    type: channel
+    hasUrls: '1'
+    template: news/_entry
+    maxLevels: null
+    enableVersioning: '1'
+    locales:
+      en:
+        enabledByDefault: '1'
+        urlFormat: 'news/{postDate.year}/{slug}'
+        nestedUrlFormat: null
+      nl:
+        enabledByDefault: '1'
+        urlFormat: 'nieuws/{postDate.year}/{slug}'
+        nestedUrlFormat: null
+    entryTypes:
+      news:
+        name: News
+        hasTitleField: '1'
+        titleLabel: Titel
+        titleFormat: null
+        fieldLayout:
+          tabs:
+            Content:
+              body: '1'
+              tags: '0'
+  nieuwsOverzicht:
+    name: Nieuwsoverzicht
+    type: single
+    hasUrls: '1'
+    template: news
+    maxLevels: null
+    enableVersioning: '1'
+    locales:
+      en:
+        enabledByDefault: '1'
+        urlFormat: news
+        nestedUrlFormat: null
+      nl:
+        enabledByDefault: '1'
+        urlFormat: nieuws
+        nestedUrlFormat: null
+    entryTypes:
+      nieuwsOverzicht:
+        name: Nieuwsoverzicht
+        hasTitleField: '1'
+        titleLabel: Titel
+        titleFormat: null
+        fieldLayout:
+          tabs:
+            Default:
+              body: '0'
+              tags: '0'
+  overOns:
+    name: 'Over ons'
+    type: single
+    hasUrls: '1'
+    template: about
+    maxLevels: null
+    enableVersioning: '1'
+    locales:
+      en:
+        enabledByDefault: '1'
+        urlFormat: about-us
+        nestedUrlFormat: null
+      nl:
+        enabledByDefault: '1'
+        urlFormat: over-ons
+        nestedUrlFormat: null
+    entryTypes:
+      overOns:
+        name: 'Over ons'
+        hasTitleField: '1'
+        titleLabel: Titel
+        titleFormat: null
+        fieldLayout:
+          tabs:
+            Default:
+              body: '0'
+              tags: '0'
+userGroups: {  }
+users:
+  fieldLayout:
+    fields: {  }
+elementIndexSettings:
+  Asset:
+    sources:
+      'folder:1':
+        tableAttributes:
+          1: filename
+          2: size
+          3: dateModified
+          4: kind
+          5: imageSize
+          6: id
+          7: dateCreated
+pluginData: {  }
+categoryGroups: {  }
+tagGroups:
+  default:
+    name: Default
+    fieldLayout:
+      fields: {  }

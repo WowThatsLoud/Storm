@@ -1,0 +1,1 @@
+This file is only added to create the storage folder by default
