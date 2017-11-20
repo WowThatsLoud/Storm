@@ -1,101 +1,70 @@
 <!doctype html>
-<html lang="nl">
-<head>
-
-    {% if craft.request.serverName matches '/^[dev\.|acc\.|acceptatie\.|test\.|staging\.]/' %}
-        <meta name="robots" content="noindex, nofollow">
-    {% endif %}
-
+<html lang="en">
+  <head>
     <title>{% if entry is defined %}{{ entry.title|raw }} - {% endif %}{{ siteName }}</title>
-
-    {# META-tags #}
-    <link rel="canonical" href="{{siteUrl}}">
-    <link rel="publisher" href="//teamcreative.nl">
-    <link rel="author" href="//teamcreative.nl">
-    <meta property="og:title" content="{{siteName}}">
-    <meta property="og:site_name" content="{{siteName}}">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="nl_NL">
-    <meta property="og:url" content="{{siteUrl}}">
-    <meta property="og:image" content="{{siteUrl}}screen.jpg">{# Screenshot #}
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="article:author" content="TeamCreative">
-    <meta property="article:publisher" content="TeamCreative">
-    <meta name="title" content="{{siteName}}">
-    <meta name="description" content="">{# Description #}
-    <meta name="keywords" content="">{# Keywords #}
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="google-site-verification" content="q-YVJShEnqIX2mewrw4tYR-ZVa9l4YKi9IYUmyNSLSA" />
-
-    {# Favicons -> realfavicongenerator.net #}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{siteUrl}}assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="{{siteUrl}}assets/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{siteUrl}}assets/favicons/favicon-194x194.png" sizes="194x194">
-    <link rel="icon" type="image/png" href="{{siteUrl}}assets/favicons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="{{siteUrl}}assets/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="{{siteUrl}}assets/favicons/manifest.json">
-    <link rel="mask-icon" href="{{siteUrl}}assets/favicons/safari-pinned-tab.svg" color="#f28e00">
-    <link rel="shortcut icon" href="{{siteUrl}}assets/favicons/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="{{siteName}}">
-    <meta name="application-name" content="{{siteName}}">
-    <meta name="msapplication-TileColor" content="#f28e00">
-    <meta name="msapplication-TileImage" content="{{siteUrl}}assets/favicons/mstile-144x144.png">
-    <meta name="msapplication-config" content="{{siteUrl}}assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Bootstrap 4 website template">
+    <meta name="keywords" content="fitness, bootstrap, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
     {% block head_includes %}
         <!-- Cascading Style Sheets -->
-        <link rel="stylesheet" href="{{siteUrl}}assets/css/style.min.css" media="screen" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{siteUrl}}assets/css/main.min.css">
         <!-- Javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="{{siteUrl}}assets/js/vendor/colresizable/colresizable.min.js"></script>
     {% endblock %}
-</head>
-<body>
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body class="mobile-shift">
 
-    {% block body %}
-    {% endblock %}
+      {% block body %}
+      {% endblock %}
 
-    <!-- JavaScript -->
-    <script type="text/javascript">
-      $(function(){
-        // Initialise colResizable
-        $("table.resizable").colResizable({
-            liveDrag:true,
-            resizeMode:'flex'
-        });
-        // Disable unlinked anchors
-        $("a[href='#']").on("click", function(e){
-            e.preventDefault();
-        });
-        // Toggle mobile menu
-        $("header a[href='#toggle-menu']").on("click", function(e){
-            e.preventDefault();
-            $(this).toggleClass("open");
-            $("nav.mobile-menu").toggleClass("open");
-        });
-        // Minify header on scroll
-        $(window).on("scroll", function(){
-          if ($(this).scrollTop() > 0) {
-            $("header#header").addClass("mini");
-          } else {
-            $("header#header").removeClass("mini");
-          };
-        });
-        // Add class menu-item has-sub
-        $('li.menu-item:has(ul)').addClass('has-sub');
-        // Toggle mobile sub-menu
-        $("nav.mobile-menu li.has-sub").on("click", function(e){
-            if(e.target == this){
-				$(this).toggleClass("open");
-			};
-        });
-      });
-    </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="{{siteUrl}}assets/js/functions.min.js"></script>
+      <script src="https://use.fontawesome.com/c909099af6.js"></script>
 
-    {% block scripts %}
-    {% endblock %}
+      <!-- JavaScript -->
+      <script type="text/javascript">
+        $(function(){
+          // Initialise colResizable
+          $("table.resizable").colResizable({
+              liveDrag:true,
+              resizeMode:'flex'
+          });
+          // Disable unlinked anchors
+          $("a[href='#']").on("click", function(e){
+              e.preventDefault();
+          });
+          // Toggle mobile menu
+          $("header a[href='#toggle-menu']").on("click", function(e){
+              e.preventDefault();
+              $(this).toggleClass("open");
+              $("nav.mobile-menu").toggleClass("open");
+          });
+          // Minify header on scroll
+          $(window).on("scroll", function(){
+            if ($(this).scrollTop() > 0) {
+              $("header#header").addClass("mini");
+            } else {
+              $("header#header").removeClass("mini");
+            };
+          });
+          // Add class menu-item has-sub
+          $('li.menu-item:has(ul)').addClass('has-sub');
+          // Toggle mobile sub-menu
+          $("nav.mobile-menu li.has-sub").on("click", function(e){
+              if(e.target == this){
+  				$(this).toggleClass("open");
+  			};
+          });
+        });
+      </script>
 
-</body>
+      {% block scripts %}
+      {% endblock %}
+
+  </body>
 </html>

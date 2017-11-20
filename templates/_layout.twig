@@ -1,44 +1,100 @@
 {% extends "_base" %}
 
 {% block body %}
-	<header id="header">
-		<div class="container">
-			<div class="display-table">
-				<div class="logo display-table-cell">
-					<a href="{{siteUrl}}" style="background-image: url('//subsitetest.3daystartup.org/files/2014/10/sponsor-placeholder_1.jpg')"></a>
-				</div>
-				<div class="nav display-table-cell">
-					<nav class="top-menu">
-						{{craft.olivemenus.getMenuHTML('topMenu')}}
-					</nav>
-					<nav class="main-menu">
-						{{craft.olivemenus.getMenuHTML('mainMenu')}}
-					</nav>
-					<a href="#toggle-menu" class="button">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
+<header>
+	<div class="fixed-navbar">
+		<div class="navbar-lockup">
+			<div class="logo">
+				<a href=""><img src="{{siteUrl}}assets/img/logo.png" alt="Fitness"></a>
+			</div>
+			<ul class="nav">
+				<li><a href="">Over ons</a></li>
+				<li><a href="">Agenda</a></li>
+				<li><a href="">Blogs</a></li>
+				<li><a href="">Tickets</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="claim-lockup">
+		<div class="claim">
+			<p class="headline">Fitness In A Can<span>/</span></p>
+			<p class="kicker">Yes You Can<span>/</span></p>
+		</div>
+	</div>
+
+	<div class="angled-overlay"></div>
+
+	<div class="slide-out-nav">
+		<ul class="mobile-nav">
+			<li><a href="">Over ons</a></li>
+			<li><a href="">Agenda</a></li>
+			<li><a href="">Blogs</a></li>
+			<li><a href="">Tickets</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+		<div class="mobile-nav-slice"></div>
+	</div>
+
+	<div class="mobile-nav-toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</header>
+
+<section class="featured">
+
+		{% block content %}
+		{% endblock %}
+
+</section>
+
+<footer>
+	<div class="closer">
+		<div class="closing-claim">
+			<h1>We launch leaders with big ideas</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</div>
+
+	<div class="bg-angled-left"></div>
+
+	<div class="bg-angled-right"></div>
+
+	<div class="container footer-lockup">
+		<div class="red-angle"></div>
+		<div class="row">
+			<div class="col-lg-7">
+				<img src="{{siteUrl}}assets/img/logo-white.png" style="width:60%;" />
+			</div>
+
+			<div class="col-lg-8">
+				<h3>About us</h3>
+				<p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+			</div>
+
+			<div class="col-lg-5">
+				<h3>Stay in touch</h3>
+				<div class="social-icons">
+					<a href=""><i style="font-family: 'FontAwesome' !important;" class="fa fa-facebook icon-facebook"></i></a>
+					<a href=""><i style="font-family: 'FontAwesome' !important;" class="fa fa-twitter icon-twitter"></i></a>
+					<a href=""><i style="font-family: 'FontAwesome' !important;" class="fa fa-youtube-play icon-youtube-play"></i></a>
+					<a href=""><i style="font-family: 'FontAwesome' !important;" class="fa fa-linkedin icon-linkedin"></i></a>
 				</div>
 			</div>
 		</div>
-	</header>
 
-	<nav class="mobile-menu">
-		<div class="menus">
-			{{craft.olivemenus.getMenuHTML('topMenu')}}
-			{{craft.olivemenus.getMenuHTML('mainMenu')}}
+		<div class="row">
+			<div class="col-lg-13 col-lg-offset-7">
+				<form>
+					<input type="text" placeholder="Your Name">
+					<input type="email" placeholder="Your Email" spellcheck="false">
+					<button class="newsletter-btn" type="submit" value="Join Newsletter">Join Newsletter<i class="icon-chevron-circle-right"></i></button>
+				</form>
+			</div>
 		</div>
-	</nav>
-
-	<div class="header-spacing"></div>
-
-	<section class="main">
-		{% block content %}
-		{% endblock %}
-	</section>
-
-	<footer id="footer">
-
-	</footer>
+	</div>
+</footer>
 {% endblock %}
